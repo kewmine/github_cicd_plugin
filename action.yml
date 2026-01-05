@@ -1,0 +1,13 @@
+name: "URL Extractor"
+description: "Extract URLs from source code and send to HTTP server"
+inputs:
+  endpoint:
+    required: true
+  organization_id:
+    required: true
+  service_name:
+    required: true
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
