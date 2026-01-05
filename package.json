@@ -1,7 +1,7 @@
 {
   "name": "github-cicd-plugin",
   "version": "1.0.0",
-  "description": "GitHub Action to extract URLs from source code and POST them to a server",
+  "description": "GitHub Action to extract URLs and send them to backend",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {

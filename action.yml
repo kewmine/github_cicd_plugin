@@ -1,13 +1,17 @@
-name: "URL Extractor"
-description: "Extract URLs from source code and send to HTTP server"
+name: "GitHub CICD URL Extractor"
+description: "Extract URLs from source code and ingest them into backend"
+
 inputs:
   endpoint:
+    description: "Backend ingestion endpoint"
     required: true
   organization_id:
+    description: "Organization ID"
     required: true
   service_name:
+    description: "Service or repo name"
     required: true
+
 runs:
   using: "node20"
   main: "dist/index.js"
-
