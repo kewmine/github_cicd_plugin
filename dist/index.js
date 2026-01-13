@@ -44797,6 +44797,13 @@ const URL_REGEX = /https?:\/\/[a-zA-Z0-9.-]+(?::\d+)?(?:[\/a-zA-Z0-9._~:?#@!$&'(
 
     // Send data
     core.info(`Found ${endpoints.length} endpoints. Sending to ${backendEndpoint}...`);
+
+    // Debug Log: Show first 5 endpoints to verify service_uri
+    if (endpoints.length > 0) {
+      core.info("DEBUG: First 5 endpoints sample:");
+      core.info(JSON.stringify(endpoints.slice(0, 5), null, 2));
+    }
+
     // Post in batches? The original code posted all at once. We'll stick to that.
 
     await axios.post(backendEndpoint, endpoints, {
